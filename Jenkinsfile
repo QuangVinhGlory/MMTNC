@@ -13,8 +13,8 @@ pipeline {
     stage ('Build and publish Docker image') {
       steps {
         withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
-          bat 'docker build -t 21120604/mmtnc .'
-          bat 'docker push 21120604/mmtnc'
+          bat 'docker build -t 20120068/mmtnc .'
+          bat 'docker push 20120068/mmtnc'
         }
       }
     }
