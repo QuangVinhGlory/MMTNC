@@ -1,10 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage ('Pull') {
+    stage('Checkout source code') {
       steps {
-        git 'https://github.com/QuangVinhGlory/MMTNC.git'
+        git branch: 'main',
+            url: 'https://github.com/QuangVinhGlory/MMTNC.git'
+        sh "ls -la"
       }
     }
+    
   }
 }
